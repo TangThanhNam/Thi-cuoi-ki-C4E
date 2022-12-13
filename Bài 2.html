@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Bài tập 2</title>
+    <link rel="stylesheet" href="assets/css/stylebai2.css">
+</head>
+<body>
+<header class="app">
+    <div class="container">
+        <div class="heading">
+            <h1>In hình tam giác </h1>
+            <p>Tăng Thành Nam- Nhóm 7</p>
+        </div>  
+        <div class="app-form">
+            <form action="">
+                <label for="num-a">Nhập số n:</label><br>
+                <input type="text" id="n" name="n" "><br>
+                <br>
+                <button type="button" onclick="getRes()">Trả kết quả</button>
+                <p id="res">Kết quả được trả bằng console.log</p>
+              </form> 
+        </div>
+    <div> 
+</header>
+    
+<script> 
+function numberOneTriangle(n) {
+  var string = "";
+  for (var i=1;i<=n;i++) {
+  for (var j=0;j<i;j++) {
+      string += "*"
+     }
+    string += "\n"
+  }
+  return string
+}
+
+console.log(numberOneTriangle(4));
+
+
+function getRes () {
+  let n = document.getElementById('n').value;
+  // let output = numberOneTriangle(n)
+  console.log("Hình tam giác của bạn đây:");
+  console.log(numberOneTriangle(n));
+
+
+  // document.getElementById("res").innerHTML = <h1>numberOneTriangle(n)</h1>;
+  // document.write("Kết quả là: ",numberOneTriangle(n));
+  // alert("Kết quả là: ", numberOneTriangle(n));
+}
+</script>
+</body>
+</html>
